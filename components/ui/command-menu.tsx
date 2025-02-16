@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import { Command } from 'cmdk';
-import { cnExt, cn } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { tv, type VariantProps } from '@/utils/tv';
 import { PolymorphicComponentProps } from '@/utils/polymorphic';
 import * as Modal from '@/components/ui/modal';
@@ -27,13 +27,13 @@ const CommandDialog = ({
       <Modal.Content
         overlayClassName={cn('justify-start pt-20', overlayClassName)}
         showClose={false}
-        className={cnExt(
+        className={cn(
           'flex max-h-full max-w-[600px] flex-col overflow-hidden rounded-2xl',
           className,
         )}
       >
         <Command
-          className={cnExt(
+          className={cn(
             'divide-y divide-stroke-soft-200',
             'grid min-h-0 auto-cols-auto grid-flow-row',
             '[&>[cmdk-label]+*]:!border-t-0',
@@ -53,7 +53,7 @@ const CommandInput = React.forwardRef<
   return (
     <Command.Input
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'w-full bg-transparent text-paragraph-sm text-text-strong-950 outline-none',
         'transition duration-200 ease-out',
@@ -79,7 +79,7 @@ const CommandList = React.forwardRef<
   return (
     <Command.List
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'flex max-h-min min-h-0 flex-1 flex-col',
         '[&>[cmdk-list-sizer]]:divide-y [&>[cmdk-list-sizer]]:divide-stroke-soft-200',
         '[&>[cmdk-list-sizer]]:overflow-auto',
@@ -98,7 +98,7 @@ const CommandGroup = React.forwardRef<
   return (
     <Command.Group
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'relative px-2 py-3',
         // heading
         '[&>[cmdk-group-heading]]:text-label-xs [&>[cmdk-group-heading]]:text-text-sub-600',
@@ -156,7 +156,7 @@ function CommandItemIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-5 shrink-0 text-text-sub-600', className)}
+      className={cn('size-5 shrink-0 text-text-sub-600', className)}
       {...rest}
     />
   );
@@ -168,7 +168,7 @@ function CommandFooter({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cnExt(
+      className={cn(
         'flex h-12 items-center justify-between gap-3 px-5',
         className,
       )}
@@ -183,7 +183,7 @@ function CommandFooterKeyBox({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cnExt(
+      className={cn(
         'flex size-5 shrink-0 items-center justify-center rounded bg-bg-weak-50 text-text-sub-600 ring-1 ring-inset ring-stroke-soft-200',
         className,
       )}

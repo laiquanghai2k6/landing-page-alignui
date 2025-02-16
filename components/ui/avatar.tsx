@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 
-import { cn, cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { recursiveCloneChildren } from '@/utils/recursive-clone-children';
 import { tv, type VariantProps } from '@/utils/tv';
 import {
@@ -289,7 +289,7 @@ const AvatarBrandLogo = React.forwardRef<
   return (
     <Component
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'box-content size-6 rounded-full border-2 border-bg-white-0',
         className,
       )}
@@ -305,7 +305,7 @@ function AvatarNotification({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cnExt(
+      className={cn(
         'box-content size-3 rounded-full border-2 border-bg-white-0 bg-error-base',
         className,
       )}

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { PolymorphicComponentProps } from '@/utils/polymorphic';
 
 const TabMenuVerticalContent = TabsPrimitive.Content;
@@ -30,7 +30,7 @@ const TabMenuVerticalList = React.forwardRef<
   return (
     <TabsPrimitive.List
       ref={forwardedRef}
-      className={cnExt('w-full space-y-2', className)}
+      className={cn('w-full space-y-2', className)}
       {...rest}
     />
   );
@@ -44,7 +44,7 @@ const TabMenuVerticalTrigger = React.forwardRef<
   return (
     <TabsPrimitive.Trigger
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'group/tab-item w-full rounded-lg p-2 text-left text-label-sm text-text-sub-600 outline-none',
         'grid auto-cols-auto grid-flow-col grid-cols-[auto,minmax(0,1fr)] items-center gap-1.5',
@@ -72,7 +72,7 @@ function TabMenuVerticalIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt(
+      className={cn(
         // base
         'size-5 text-text-sub-600',
         'transition duration-200 ease-out',
@@ -95,7 +95,7 @@ function TabMenuVerticalArrowIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt(
+      className={cn(
         // base
         'size-5 p-px text-text-sub-600',
         'rounded-full bg-bg-white-0 opacity-0 shadow-regular-xs',

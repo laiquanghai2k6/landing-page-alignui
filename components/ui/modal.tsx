@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import * as CompactButton from '@/components/ui/compact-button';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { type RemixiconComponentType, RiCloseLine } from '@remixicon/react';
 
 const ModalRoot = DialogPrimitive.Root;
@@ -18,7 +18,7 @@ const ModalOverlay = React.forwardRef<
   return (
     <DialogPrimitive.Overlay
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'fixed inset-0 z-50 flex flex-col items-center justify-center overflow-y-auto bg-overlay p-4 backdrop-blur-[10px]',
         // animation
@@ -47,7 +47,7 @@ const ModalContent = React.forwardRef<
         <ModalOverlay className={overlayClassName}>
           <DialogPrimitive.Content
             ref={forwardedRef}
-            className={cnExt(
+            className={cn(
               // base
               'relative w-full max-w-[400px]',
               'rounded-20 bg-bg-white-0 shadow-regular-md',
@@ -95,7 +95,7 @@ function ModalHeader({
 }) {
   return (
     <div
-      className={cnExt(
+      className={cn(
         'relative flex items-start gap-3.5 py-4 pl-5 pr-14 before:absolute before:inset-x-0 before:bottom-0 before:border-b before:border-stroke-soft-200',
         className,
       )}
@@ -130,7 +130,7 @@ const ModalTitle = React.forwardRef<
   return (
     <DialogPrimitive.Title
       ref={forwardedRef}
-      className={cnExt('text-label-sm text-text-strong-950', className)}
+      className={cn('text-label-sm text-text-strong-950', className)}
       {...rest}
     />
   );
@@ -144,7 +144,7 @@ const ModalDescription = React.forwardRef<
   return (
     <DialogPrimitive.Description
       ref={forwardedRef}
-      className={cnExt('text-paragraph-xs text-text-sub-600', className)}
+      className={cn('text-paragraph-xs text-text-sub-600', className)}
       {...rest}
     />
   );
@@ -155,7 +155,7 @@ function ModalBody({
   className,
   ...rest
 }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cnExt('p-5', className)} {...rest} />;
+  return <div className={cn('p-5', className)} {...rest} />;
 }
 ModalBody.displayName = 'ModalBody';
 
@@ -165,7 +165,7 @@ function ModalFooter({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cnExt(
+      className={cn(
         'flex items-center justify-between gap-3 border-t border-stroke-soft-200 px-5 py-4',
         className,
       )}

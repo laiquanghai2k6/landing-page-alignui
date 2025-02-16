@@ -6,7 +6,7 @@ const config = {
   semi: true,
   printWidth: 80,
   plugins: ['prettier-plugin-tailwindcss'],
-  tailwindFunctions: ['tv', 'cn', 'cnExt'],
+  tailwindFunctions: ['tv', 'cn'],
 };
 
 export default config;

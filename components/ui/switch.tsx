@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 
 const Switch = React.forwardRef<
   React.ComponentRef<typeof SwitchPrimitives.Root>,
@@ -8,7 +8,7 @@ const Switch = React.forwardRef<
 >(({ className, disabled, ...rest }, forwardedRef) => {
   return (
     <SwitchPrimitives.Root
-      className={cnExt(
+      className={cn(
         'group/switch block h-5 w-8 shrink-0 p-0.5 outline-none focus:outline-none',
         className,
       )}
@@ -17,7 +17,7 @@ const Switch = React.forwardRef<
       {...rest}
     >
       <div
-        className={cnExt(
+        className={cn(
           // base
           'h-4 w-7 rounded-full bg-bg-soft-200 p-0.5 outline-none',
           'transition duration-200 ease-out',
@@ -44,7 +44,7 @@ const Switch = React.forwardRef<
         )}
       >
         <SwitchPrimitives.Thumb
-          className={cnExt(
+          className={cn(
             // base
             'pointer-events-none relative block size-3',
             'transition-transform duration-200 ease-out',

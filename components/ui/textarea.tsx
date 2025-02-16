@@ -1,7 +1,7 @@
 // AlignUI Textarea v0.0.0
 
 import * as React from 'react';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 
 const TEXTAREA_ROOT_NAME = 'TextareaRoot';
 const TEXTAREA_NAME = 'Textarea';
@@ -17,7 +17,7 @@ const Textarea = React.forwardRef<
 >(({ className, hasError, simple, disabled, ...rest }, forwardedRef) => {
   return (
     <textarea
-      className={cnExt(
+      className={cn(
         [
           // base
           'block w-full resize-none text-paragraph-sm text-text-strong-950 outline-none',
@@ -118,7 +118,7 @@ const TextareaRoot = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 
     return (
       <div
-        className={cnExt(
+        className={cn(
           [
             // base
             'group/textarea relative flex w-full flex-col rounded-xl bg-bg-white-0 pb-2.5 shadow-regular-xs',
@@ -174,7 +174,7 @@ function CharCounter({
 
   return (
     <span
-      className={cnExt(
+      className={cn(
         'text-subheading-2xs text-text-soft-400',
         // disabled
         'group-has-[[disabled]]/textarea:text-text-disabled-300',

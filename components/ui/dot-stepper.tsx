@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { tv, type VariantProps } from '@/utils/tv';
 import { recursiveCloneChildren } from '@/utils/recursive-clone-children';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { Slot } from '@radix-ui/react-slot';
 
 const DOT_STEPPER_ROOT_NAME = 'DotStepperRoot';
@@ -89,7 +89,7 @@ const DotStepperItem = React.forwardRef<HTMLButtonElement, DotStepperItemProps>(
     return (
       <Component
         ref={forwardedRef}
-        className={cnExt(item({ class: className }), {
+        className={cn(item({ class: className }), {
           'bg-primary-base': active,
         })}
         {...rest}

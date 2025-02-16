@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as Alert from '@/components/ui/alert';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import * as NotificationPrimitives from '@radix-ui/react-toast';
 import {
   RiAlertFill,
@@ -21,7 +21,7 @@ const NotificationViewport = React.forwardRef<
 >(({ className, ...rest }, forwardedRef) => (
   <NotificationPrimitives.Viewport
     ref={forwardedRef}
-    className={cnExt(
+    className={cn(
       'fixed left-0 top-0 z-[100] flex max-h-screen w-full flex-col-reverse gap-5 p-4 sm:bottom-0 sm:left-auto sm:right-0 sm:top-auto sm:max-w-[438px] sm:flex-col sm:p-6',
       className,
     )}
@@ -86,7 +86,7 @@ const Notification = React.forwardRef<
     return (
       <NotificationPrimitives.Root
         ref={forwardedRef}
-        className={cnExt(
+        className={cn(
           // open
           'data-[state=open]:animate-in data-[state=open]:max-[639px]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-right-full',
           // close

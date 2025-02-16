@@ -4,7 +4,7 @@ import * as React from 'react';
 import { tv, type VariantProps } from '@/utils/tv';
 import type { PolymorphicComponentProps } from '@/utils/polymorphic';
 import { recursiveCloneChildren } from '@/utils/recursive-clone-children';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { RiArrowRightSLine } from '@remixicon/react';
 import { Slot } from '@radix-ui/react-slot';
 
@@ -25,7 +25,7 @@ function HorizontalStepperRoot({
 
   return (
     <Component
-      className={cnExt('flex flex-wrap justify-center gap-4', className)}
+      className={cn('flex flex-wrap justify-center gap-4', className)}
       {...rest}
     >
       {children}
@@ -43,7 +43,7 @@ function HorizontalStepperSeparatorIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-5 shrink-0 text-text-soft-400', className)}
+      className={cn('size-5 shrink-0 text-text-soft-400', className)}
       {...rest}
     />
   );

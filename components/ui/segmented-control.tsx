@@ -6,7 +6,7 @@ import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 import mergeRefs from 'merge-refs';
 import { Slottable } from '@radix-ui/react-slot';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { useTabObserver } from '@/hooks/use-tab-observer';
 
 const SegmentedControlRoot = TabsPrimitive.Root;
@@ -30,7 +30,7 @@ const SegmentedControlList = React.forwardRef<
   return (
     <TabsPrimitive.List
       ref={mergeRefs(forwardedRef, listRef)}
-      className={cnExt(
+      className={cn(
         'relative isolate grid w-full auto-cols-fr grid-flow-col gap-1 rounded-10 bg-bg-weak-50 p-1',
         className,
       )}
@@ -40,7 +40,7 @@ const SegmentedControlList = React.forwardRef<
 
       {/* floating bg */}
       <div
-        className={cnExt(
+        className={cn(
           'absolute inset-y-1 left-0 -z-10 rounded-md bg-bg-white-0 shadow-toggle-switch transition-transform duration-300',
           {
             hidden: !mounted,
@@ -66,7 +66,7 @@ const SegmentedControlTrigger = React.forwardRef<
   return (
     <TabsPrimitive.Trigger
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'peer',
         'relative z-10 h-7 whitespace-nowrap rounded-md px-1 text-label-sm text-text-soft-400 outline-none',

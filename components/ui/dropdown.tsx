@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { RiArrowRightSLine } from '@remixicon/react';
 import { PolymorphicComponentProps } from '@/utils/polymorphic';
 
@@ -26,7 +26,7 @@ const DropdownMenuContent = React.forwardRef<
     <DropdownMenuPrimitive.Content
       ref={forwardedRef}
       sideOffset={sideOffset}
-      className={cnExt(
+      className={cn(
         'z-50 w-[300px] overflow-hidden rounded-2xl bg-bg-white-0 p-2 shadow-regular-md ring-1 ring-inset ring-stroke-soft-200',
         'flex flex-col gap-1',
         // origin
@@ -52,7 +52,7 @@ const DropdownMenuItem = React.forwardRef<
 >(({ className, inset, ...rest }, forwardedRef) => (
   <DropdownMenuPrimitive.Item
     ref={forwardedRef}
-    className={cnExt(
+    className={cn(
       // base
       'group/item relative cursor-pointer select-none rounded-lg p-2 text-paragraph-sm text-text-strong-950 outline-none',
       'flex items-center gap-2',
@@ -80,7 +80,7 @@ function DropdownItemIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt(
+      className={cn(
         // base
         'size-5 text-text-sub-600',
         // disabled
@@ -99,7 +99,7 @@ const DropdownMenuGroup = React.forwardRef<
 >(({ className, ...rest }, forwardedRef) => (
   <DropdownMenuPrimitive.Group
     ref={forwardedRef}
-    className={cnExt('flex flex-col gap-1', className)}
+    className={cn('flex flex-col gap-1', className)}
     {...rest}
   />
 ));
@@ -111,7 +111,7 @@ const DropdownMenuLabel = React.forwardRef<
 >(({ className, ...rest }, forwardedRef) => (
   <DropdownMenuPrimitive.Label
     ref={forwardedRef}
-    className={cnExt(
+    className={cn(
       'px-2 py-1 text-subheading-xs uppercase text-text-soft-400',
       className,
     )}
@@ -128,7 +128,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
 >(({ className, inset, children, ...rest }, forwardedRef) => (
   <DropdownMenuPrimitive.SubTrigger
     ref={forwardedRef}
-    className={cnExt(
+    className={cn(
       // base
       'group/item relative cursor-pointer select-none rounded-lg p-2 text-paragraph-sm text-text-strong-950 outline-0',
       'flex items-center gap-2',
@@ -155,7 +155,7 @@ const DropdownMenuSubContent = React.forwardRef<
 >(({ className, ...rest }, forwardedRef) => (
   <DropdownMenuPrimitive.SubContent
     ref={forwardedRef}
-    className={cnExt(
+    className={cn(
       'z-50 w-max overflow-hidden rounded-2xl bg-bg-white-0 p-2 shadow-regular-md ring-1 ring-inset ring-stroke-soft-200',
       'flex flex-col gap-1',
       // animation

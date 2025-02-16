@@ -1,7 +1,7 @@
 // AlignUI ProgressCircle v0.0.0
 
 import * as React from 'react';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { tv, type VariantProps } from '@/utils/tv';
 
 export const progressCircleVariants = tv({
@@ -90,7 +90,7 @@ const ProgressCircleRoot = React.forwardRef<
 
     return (
       <>
-        <div className={cnExt('relative', className)}>
+        <div className={cn('relative', className)}>
           <svg
             ref={forwardedRef}
             width={radius * 2}

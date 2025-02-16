@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import type { PolymorphicComponentProps } from '@/utils/polymorphic';
 import { RiAddLine, RiSubtractLine } from '@remixicon/react';
 
@@ -24,7 +24,7 @@ const AccordionItem = React.forwardRef<
   return (
     <AccordionPrimitive.Item
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'group/accordion',
         'rounded-10 bg-bg-white-0 p-3.5 ring-1 ring-inset ring-stroke-soft-200',
@@ -50,7 +50,7 @@ const AccordionTrigger = React.forwardRef<
   return (
     <AccordionPrimitive.Trigger
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'w-[calc(100%+theme(space.7))] text-left text-label-sm text-text-strong-950',
         'grid auto-cols-auto grid-flow-col grid-cols-[auto,minmax(0,1fr)] items-center gap-2.5',
@@ -76,7 +76,7 @@ function AccordionIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-5 text-text-sub-600', className)}
+      className={cn('size-5 text-text-sub-600', className)}
       {...rest}
     />
   );
@@ -98,7 +98,7 @@ function AccordionArrow({
   return (
     <>
       <OpenIcon
-        className={cnExt(
+        className={cn(
           'size-5 text-text-soft-400',
           'transition duration-200 ease-out',
           // hover
@@ -110,7 +110,7 @@ function AccordionArrow({
         {...rest}
       />
       <CloseIcon
-        className={cnExt(
+        className={cn(
           'size-5 text-text-sub-600',
           // close
           'hidden group-data-[state=open]/accordion:block',
@@ -134,10 +134,7 @@ const AccordionContent = React.forwardRef<
       {...rest}
     >
       <div
-        className={cnExt(
-          'pt-1.5 text-paragraph-sm text-text-sub-600',
-          className,
-        )}
+        className={cn('pt-1.5 text-paragraph-sm text-text-sub-600', className)}
       >
         {children}
       </div>

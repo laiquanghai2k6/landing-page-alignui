@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { PolymorphicComponentProps } from '@/utils/polymorphic';
 
 const BREADCRUMB_ROOT_NAME = 'BreadcrumbRoot';
@@ -23,7 +23,7 @@ function BreadcrumbRoot({
   const Component = asChild ? Slot : 'div';
 
   return (
-    <Component className={cnExt('flex flex-wrap gap-1.5', className)} {...rest}>
+    <Component className={cn('flex flex-wrap gap-1.5', className)} {...rest}>
       {children}
     </Component>
   );
@@ -42,7 +42,7 @@ const BreadcrumbItem = React.forwardRef<HTMLDivElement, BreadcrumbItemProps>(
     return (
       <Component
         ref={forwardedRef}
-        className={cnExt(
+        className={cn(
           // base
           'flex items-center gap-1.5 transition-colors duration-200 ease-out',
           'text-label-sm text-text-sub-600',
@@ -72,7 +72,7 @@ function BreadcrumbItemIcon<T extends React.ElementType>({
 }: PolymorphicComponentProps<T>) {
   const Component = as || 'div';
 
-  return <Component className={cnExt('size-5', className)} {...rest} />;
+  return <Component className={cn('size-5', className)} {...rest} />;
 }
 BreadcrumbItemIcon.displayName = BREADCRUMB_ICON_NAME;
 
@@ -85,7 +85,7 @@ function BreadcrumbItemArrowIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt(
+      className={cn(
         'flex size-5 select-none items-center justify-center text-text-disabled-300',
         className,
       )}

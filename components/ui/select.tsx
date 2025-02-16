@@ -8,7 +8,7 @@ import * as ScrollAreaPrimitives from '@radix-ui/react-scroll-area';
 import { Slottable } from '@radix-ui/react-slot';
 import { RiArrowDownSLine, RiCheckLine } from '@remixicon/react';
 import { tv, type VariantProps } from '@/utils/tv';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import type { PolymorphicComponentProps } from '@/utils/polymorphic';
 
 export const selectVariants = tv({
@@ -321,7 +321,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitives.Portal>
       <SelectPrimitives.Content
         ref={forwardedRef}
-        className={cnExt(
+        className={cn(
           // base
           'relative z-50 overflow-hidden rounded-2xl bg-bg-white-0 shadow-regular-md ring-1 ring-inset ring-stroke-soft-200',
           // widths
@@ -369,7 +369,7 @@ const SelectItem = React.forwardRef<
   return (
     <SelectPrimitives.Item
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'group relative cursor-pointer select-none rounded-lg p-2 pr-9 text-paragraph-sm text-text-strong-950',
         'flex items-center gap-2 transition duration-200 ease-out',
@@ -386,7 +386,7 @@ const SelectItem = React.forwardRef<
     >
       <SelectPrimitives.ItemText asChild>
         <span
-          className={cnExt(
+          className={cn(
             // base
             'flex flex-1 items-center gap-2',
             // disabled

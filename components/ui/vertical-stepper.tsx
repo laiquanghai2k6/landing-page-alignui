@@ -4,7 +4,7 @@ import * as React from 'react';
 import { tv, type VariantProps } from '@/utils/tv';
 import type { PolymorphicComponentProps } from '@/utils/polymorphic';
 import { recursiveCloneChildren } from '@/utils/recursive-clone-children';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { RiArrowRightSLine } from '@remixicon/react';
 import { Slot } from '@radix-ui/react-slot';
 
@@ -23,7 +23,7 @@ function VerticalStepperRoot({
 }) {
   const Component = asChild ? Slot : 'div';
   return (
-    <Component className={cnExt('w-full space-y-2', className)} {...rest}>
+    <Component className={cn('w-full space-y-2', className)} {...rest}>
       {children}
     </Component>
   );
@@ -39,7 +39,7 @@ function VerticalStepperArrow<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-5 shrink-0 text-text-sub-600', className)}
+      className={cn('size-5 shrink-0 text-text-sub-600', className)}
       {...rest}
     />
   );

@@ -4,7 +4,7 @@ import * as React from 'react';
 import { tv, type VariantProps } from '@/utils/tv';
 import type { PolymorphicComponentProps } from '@/utils/polymorphic';
 import { recursiveCloneChildren } from '@/utils/recursive-clone-children';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { Slot } from '@radix-ui/react-slot';
 
 const PAGINATION_ROOT_NAME = 'PaginationRoot';
@@ -133,7 +133,7 @@ const PaginationItem = React.forwardRef<HTMLButtonElement, PaginationItemProps>(
     return (
       <Component
         ref={forwardedRef}
-        className={cnExt(item({ class: className }), {
+        className={cn(item({ class: className }), {
           'text-text-strong-950': current,
         })}
         {...rest}

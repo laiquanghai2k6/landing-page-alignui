@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import * as LabelPrimitives from '@radix-ui/react-label';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 
 const LabelRoot = React.forwardRef<
   React.ComponentRef<typeof LabelPrimitives.Root>,
@@ -15,7 +15,7 @@ const LabelRoot = React.forwardRef<
   return (
     <LabelPrimitives.Root
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'group cursor-pointer text-label-sm text-text-strong-950',
         'flex items-center gap-px',
         // disabled
@@ -36,7 +36,7 @@ function LabelAsterisk({
 }: React.HTMLAttributes<HTMLSpanElement>) {
   return (
     <span
-      className={cnExt(
+      className={cn(
         'text-primary-base',
         // disabled
         'group-aria-disabled:text-text-disabled-300',
@@ -56,7 +56,7 @@ function LabelSub({
 }: React.HTMLAttributes<HTMLSpanElement>) {
   return (
     <span
-      className={cnExt(
+      className={cn(
         'text-paragraph-sm text-text-sub-600',
         // disabled
         'group-aria-disabled:text-text-disabled-300',

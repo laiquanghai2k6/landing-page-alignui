@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import { cn, cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 
 function IconCheck({ ...rest }: React.SVGProps<SVGSVGElement>) {
   return (
@@ -52,7 +52,7 @@ const Checkbox = React.forwardRef<
     <CheckboxPrimitive.Root
       ref={forwardedRef}
       checked={checked}
-      className={cnExt(
+      className={cn(
         'group/checkbox relative flex size-5 shrink-0 items-center justify-center outline-none',
         'focus:outline-none',
         className,

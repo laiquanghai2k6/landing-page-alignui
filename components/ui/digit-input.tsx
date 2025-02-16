@@ -1,7 +1,7 @@
 // AlignUI DigitInput v0.0.0
 
 import * as React from 'react';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 
 import OtpInput, { OTPInputProps } from 'react-otp-input';
 
@@ -21,7 +21,7 @@ function DigitInput({
 }: DigitInputProps) {
   return (
     <OtpInput
-      containerStyle={cnExt('flex w-full items-center gap-2.5', className)}
+      containerStyle={cn('flex w-full items-center gap-2.5', className)}
       skipDefaultStyles
       renderInput={(inputProps) => (
         <DigitInputSlot
@@ -45,7 +45,7 @@ const DigitInputSlot = React.forwardRef<
   return (
     <input
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'h-16 w-full min-w-0 rounded-10 bg-bg-white-0 text-center text-title-h5 text-text-strong-950 shadow-regular-xs outline-none ring-1 ring-inset ring-stroke-soft-200',
         'transition duration-200 ease-out',
         // hover

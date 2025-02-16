@@ -6,7 +6,7 @@ import * as React from 'react';
 import { Slottable } from '@radix-ui/react-slot';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 import mergeRefs from 'merge-refs';
-import { cn, cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import type { PolymorphicComponentProps } from '@/utils/polymorphic';
 import { useTabObserver } from '@/hooks/use-tab-observer';
 
@@ -21,7 +21,7 @@ const TabMenuHorizontalRoot = React.forwardRef<
     <TabsPrimitive.Root
       ref={forwardedRef}
       orientation='horizontal'
-      className={cnExt('w-full', className)}
+      className={cn('w-full', className)}
       {...rest}
     />
   );
@@ -65,7 +65,7 @@ const TabMenuHorizontalList = React.forwardRef<
     >
       <TabsPrimitive.List
         ref={mergeRefs(forwardedRef, listRef)}
-        className={cnExt(
+        className={cn(
           'group/tab-list relative flex h-12 items-center gap-6 whitespace-nowrap border-y border-stroke-soft-200',
           className,
         )}
@@ -101,7 +101,7 @@ const TabMenuHorizontalTrigger = React.forwardRef<
   return (
     <TabsPrimitive.Trigger
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         // base
         'group/tab-item h-12 py-3.5 text-label-sm text-text-sub-600 outline-none',
         'flex items-center justify-center gap-1.5',
@@ -127,7 +127,7 @@ function TabMenuHorizontalIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt(
+      className={cn(
         // base
         'size-5 text-text-sub-600',
         'transition duration-200 ease-out',
@@ -150,7 +150,7 @@ function TabMenuHorizontalArrowIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-5 text-text-sub-600', className)}
+      className={cn('size-5 text-text-sub-600', className)}
       {...rest}
     />
   );

@@ -1,7 +1,7 @@
 // AlignUI FileUpload v0.0.0
 
 import * as React from 'react';
-import { cnExt } from '@/utils/cn';
+import { cn } from '@/utils/cn';
 import { PolymorphicComponentProps } from '@/utils/polymorphic';
 import { Slot } from '@radix-ui/react-slot';
 
@@ -16,7 +16,7 @@ const FileUpload = React.forwardRef<
   return (
     <Component
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'flex w-full cursor-pointer flex-col items-center gap-5 rounded-xl border border-dashed border-stroke-sub-300 bg-bg-white-0 p-8 text-center',
         'transition duration-200 ease-out',
         // hover
@@ -40,7 +40,7 @@ const FileUploadButton = React.forwardRef<
   return (
     <Component
       ref={forwardedRef}
-      className={cnExt(
+      className={cn(
         'inline-flex h-8 items-center justify-center gap-2.5 whitespace-nowrap rounded-lg bg-bg-white-0 px-2.5 text-label-sm text-text-sub-600',
         'pointer-events-none ring-1 ring-inset ring-stroke-soft-200',
         className,
@@ -60,7 +60,7 @@ function FileUploadIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-6 text-text-sub-600', className)}
+      className={cn('size-6 text-text-sub-600', className)}
       {...rest}
     />
   );

@@ -1,7 +1,6 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
 import { DropdownDemo } from './layout/DropdownDemo';
 import { TabMenuHorizontalDemo } from './layout/TabMenuDemo';
 import { DrawerDemo } from './layout/DrawerDemo';

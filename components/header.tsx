@@ -1,11 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { DropdownDemo } from './layout/DropdownDemo';
-import { TabMenuHorizontalDemo, TabMenuVerticalDemo } from './layout/TabMenuDemo';
-import { RiMenu3Line } from '@remixicon/react';
+import { TabMenuHorizontalDemo } from './layout/TabMenuDemo';
 import { DrawerDemo } from './layout/DrawerDemo';
 
 const DynamicThemeSwitch = dynamic(() => import('./theme-switch'), {
@@ -13,7 +11,6 @@ const DynamicThemeSwitch = dynamic(() => import('./theme-switch'), {
 });
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='border-b border-stroke-soft-200 '>

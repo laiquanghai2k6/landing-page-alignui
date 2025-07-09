@@ -12,7 +12,6 @@ import {
 
 import * as Avatar from '@/components/ui/avatar';
 import * as Badge from '@/components/ui/badge';
-import * as Button from '@/components/ui/button';
 import * as Divider from '@/components/ui/divider';
 import * as Dropdown from '@/components/ui/dropdown';
 import * as Switch from '@/components/ui/switch';

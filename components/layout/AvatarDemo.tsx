@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as Avatar from '@/components/ui/avatar';
-import { cn } from '@/utils/cn';
 
 type Props = {
   url: string;

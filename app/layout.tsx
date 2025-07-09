@@ -7,7 +7,6 @@ import { cn } from '@/utils/cn';
 import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { NotificationProvider } from '@/components/ui/notification-provider';
 import Header from '@/components/header';
-import { ToastDemo } from '@/components/layout/Toast';
 import { Toaster } from 'sonner';
 
 const inter = FontSans({

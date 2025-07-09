@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+#fp-credit {
+  display: none !important;
+}
 @layer base {
   /*#region Colors */
   :root {
@@ -298,6 +300,8 @@
     --stable-base: var(--teal-500);
     --stable-light: var(--teal-200);
     --stable-lighter: var(--teal-50);
+
+    --copy-right:var(--neutral-600)
   }
 
   .dark {
@@ -381,6 +385,7 @@
     --social-tidal: #fff;
     --social-amazon: #fff;
     --social-zendesk: #fff;
+    --copy-right:#fff
   }
   /*#endregion Colors */
 }

@@ -21,7 +21,7 @@ const TabMenuHorizontalRoot = React.forwardRef<
     <TabsPrimitive.Root
       ref={forwardedRef}
       orientation='horizontal'
-      className={cn('w-full', className)}
+      className={cn('w-full ', className)}
       {...rest}
     />
   );
@@ -59,14 +59,14 @@ const TabMenuHorizontalList = React.forwardRef<
     <div
       ref={listWrapperRef}
       className={cn(
-        'relative grid overflow-x-auto overflow-y-hidden overscroll-contain',
+        'relative grid overflow-x-auto h-30 overflow-y-hidden  overscroll-contain ',
         wrapperClassName,
       )}
     >
       <TabsPrimitive.List
         ref={mergeRefs(forwardedRef, listRef)}
         className={cn(
-          'group/tab-list relative flex h-12 items-center gap-6 whitespace-nowrap border-y border-stroke-soft-200',
+          'group/tab-list relative flex h-full items-center gap-6 max-md:gap-1 whitespace-nowrap border-y border-stroke-soft-200',
           className,
         )}
         {...rest}

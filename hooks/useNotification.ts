@@ -177,7 +177,7 @@ function notification({ ...props }: Notification & { id?: string }) {
   };
 }
 
-function useNotification() {
+ export function useNotification() {
   const [state, setState] = React.useState<State>(memoryState);
 
   React.useEffect(() => {
@@ -197,5 +197,4 @@ function useNotification() {
       dispatch({ type: 'DISMISS_NOTIFICATION', notificationId }),
   };
 }
-
-export { notification, useNotification };
+// export { notification, useNotification };

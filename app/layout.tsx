@@ -7,6 +7,8 @@ import { cn } from '@/utils/cn';
 import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { NotificationProvider } from '@/components/ui/notification-provider';
 import Header from '@/components/header';
+import { ToastDemo } from '@/components/layout/Toast';
+import { Toaster } from 'sonner';
 
 const inter = FontSans({
   subsets: ['latin'],
@@ -40,8 +42,11 @@ export default function RootLayout({
           <TooltipProvider>
             <div className='flex min-h-screen flex-col'>
               <Header />
+
               <main className='flex flex-1 flex-col'>{children}</main>
             </div>
+            <Toaster />
+
           </TooltipProvider>
         </ThemeProvider>
         <NotificationProvider />

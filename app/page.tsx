@@ -1,10 +1,3 @@
-import Link from 'next/link';
-import * as Button from '@/components/ui/button';
-import { RiGithubFill } from '@remixicon/react';
-import { PaginationDemo } from '@/components/layout/PaginationDemo';
-import { ProgressBarDemo } from '@/components/layout/Progress';
-import { ToastDemo } from '@/components/layout/Toast';
-import dynamic from 'next/dynamic';
 import { LabelDemo } from '@/components/layout/LabelDemo';
 import { TextareaInteractiveCounter } from '@/components/layout/TextAreaCountChar';
 import { InputDemo } from '@/components/layout/InputDemo';
